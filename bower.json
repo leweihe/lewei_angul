@@ -1,0 +1,28 @@
+{
+  "name": "lewei_angul",
+  "description": "this is my first angularjs project",
+  "main": "",
+  "authors": [
+    "lewei.he <lewei.me@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/leweihe/lewei_angul",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/main/webapp/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-animate": "1.5.x",
+    "angular-mocks": "1.5.x",
+    "angular-resource": "1.5.x",
+    "angular-route": "1.5.x",
+    "bootstrap": "3.3.x",
+    "jquery": "2.2.x"
+  }
+}
