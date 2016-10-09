@@ -1,3 +1,16 @@
 <p>This is the partial for view 1.</p>
+
 <div id="mapContainer" class="map"></div>
-<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+<div></div>
+<button type="button" class="btn btn-default" aria-label="Left Align" ng-click="setMapStyle('light')">
+    Light
+</button>
+<button type="button" class="btn btn-default" aria-label="Left Align" ng-click="setMapStyle('dark')">
+    Dark
+</button>
+
+<input type="text" ng-model="fromLocation">
+<input type="text" ng-model="toLocation">
+<button type="button" class="btn btn-success" ng-click="doSearchDrivingPath()">
+    search
+</button>
