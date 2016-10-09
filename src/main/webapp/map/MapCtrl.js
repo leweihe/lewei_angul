@@ -1,19 +1,21 @@
 'use strict';
 
 angular.module('myApp.map', ['ngRoute'])
+
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/map', {
             templateUrl: 'map/map.html',
             controller: 'MapCtrl'
         });
     }])
+
     .controller('MapCtrl', ['$scope', function ($scope) {
 
         var map = new AMap.Map('mapContainer', {
             resizeEnable: true,
-            zoom: 12
+            zoom: 12,
+            center: [118.139839, 24.488006]
         });
-
         $scope.setMapStyle = function (mapStyle) {
             map.setMapStyle(mapStyle);
         };
