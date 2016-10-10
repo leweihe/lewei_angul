@@ -9,8 +9,13 @@ angular.module('myApp.view2', ['ngRoute'])
         });
     }])
 
-    .controller('View2Ctrl', ['$scope', '$http', function ($scope, $http) {
+    .controller('View2Ctrl', ['$scope', '$http', 'filterFilter', function ($scope, $http, filterFilter) {
         $http.get('app/rest/users/all').success(function (users) {
             $scope.users = users;
+            $scope.filteredUsers = users;
         });
+        $scope.filterString = "";
+        $scope.doFilterChange = function (value) {
+            $scope.filteredUsers = filterFilter($scope.users, $scope.filterString);
+        };
     }]);

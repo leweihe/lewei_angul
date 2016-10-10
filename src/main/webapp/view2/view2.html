@@ -1,4 +1,7 @@
-
-<div ng-repeat="u in users">
+<input type="text" ng-model="filterString" ng-change="doFilterChange()" value="filter">
+<div ng-repeat="u in filteredUsers">
     name: {{u.username}} age: {{u.age}}
 </div>
+
+
+
