@@ -9,6 +9,8 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
-
+.controller('View2Ctrl', ['$scope', function($scope) {
+  $http.get('app/rest/users/me').success(function (user) {
+    $scope.user = user;
+  });
 }]);
