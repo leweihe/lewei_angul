@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
+import java.util.List;
 
 /**
  * Created by cn40580 on 2016-10-10.
@@ -24,4 +25,10 @@ public class UserServiceJpaImpl implements UserService {
     public UserDTO findUserByUserName(String name) {
         return userRepository.findByUsername(name);
     }
+
+    @Override
+    public List<UserDTO> findAllUsers() {
+        return userRepository.findAll();
+    }
+
 }
