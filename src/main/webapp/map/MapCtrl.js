@@ -13,7 +13,7 @@ angular.module('myApp.map', ['ngRoute'])
 
         var map = new AMap.Map('mapContainer', {
             resizeEnable: true,
-            zoom: 12,
+            zoom: 14,
             center: [118.139839, 24.488006]
         });
         $scope.setMapStyle = function (mapStyle) {
