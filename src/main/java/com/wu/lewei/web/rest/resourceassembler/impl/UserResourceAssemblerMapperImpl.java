@@ -1,6 +1,6 @@
 package com.wu.lewei.web.rest.resourceassembler.impl;
 
-import com.wu.lewei.dao.UserDTO;
+import com.wu.lewei.dto.UserDTO;
 import com.wu.lewei.web.rest.resource.UserResource;
 import com.wu.lewei.web.rest.resourceassembler.UserResourceAssembler;
 import com.wu.lewei.web.rest.resourceassembler.mapper.UserResourceMapper;
@@ -21,8 +21,8 @@ public class UserResourceAssemblerMapperImpl implements UserResourceAssembler {
     @Override
     public UserResource toResource(@NotNull UserDTO entity) {
         Validate.notNull(entity);
-        UserResource dto = userResourceMapper.DTOtoResource(entity);
+        UserResource res = userResourceMapper.DTOtoResource(entity);
 
-        return dto;
+        return res;
     }
 }

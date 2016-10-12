@@ -1,7 +1,7 @@
-<input type="text" ng-model="filterString" ng-change="doFilterChange()" value="filter">
-<div ng-repeat="u in filteredUsers">
-    name: {{u.username}} age: {{u.age}}
+<input type="text" class="text-field" ng-model="filterString" ng-change="doFilterChange()" value="filter">
+<div class="row" ng-repeat="u in filteredUsers">
+    <div class="col-md-1">name: </div>
+    <div class="col-md-1">{{u.username}}</div>
+    <div class="col-md-1">age: </div>
+    <div class="col-md-1">{{u.age}}</div>
 </div>
-
-
-

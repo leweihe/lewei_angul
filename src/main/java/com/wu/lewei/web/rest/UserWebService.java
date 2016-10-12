@@ -1,7 +1,7 @@
 package com.wu.lewei.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
-import com.wu.lewei.dao.UserDTO;
+import com.wu.lewei.dto.UserDTO;
 import com.wu.lewei.service.UserService;
 import com.wu.lewei.web.rest.resource.UserResource;
 import com.wu.lewei.web.rest.resourceassembler.UserResourceAssembler;

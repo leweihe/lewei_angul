@@ -1,6 +1,6 @@
 package com.wu.lewei.web.rest.resourceassembler;
 
-import com.wu.lewei.dao.UserDTO;
+import com.wu.lewei.dto.UserDTO;
 import com.wu.lewei.web.rest.resource.UserResource;
 import org.springframework.hateoas.ResourceAssembler;
 

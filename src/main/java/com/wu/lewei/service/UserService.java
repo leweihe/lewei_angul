@@ -1,6 +1,6 @@
 package com.wu.lewei.service;
 
-import com.wu.lewei.dao.UserDTO;
+import com.wu.lewei.dto.UserDTO;
 
 import java.util.List;
 

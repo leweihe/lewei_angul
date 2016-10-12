@@ -31,4 +31,21 @@ angular.module('myApp.map', ['ngRoute'])
                 ]);
             })
         };
+
+        AMap.service(["AMap.Walking"], function() {
+            var MWalk = new AMap.Walking({
+                map: map,
+                panel: "panel"
+            }); //构造路线导航类
+            //根据起终点坐标规划步行路线
+            //MWalk.search([116.379028,39.865042], [116.427281,39.903719], function(status, result){
+            MWalk.search([
+                {keyword: 'sm 城市广场'},
+                {keyword: '林德叉车'}
+            ], function(status, result) {
+                alert(result.destination);
+            });
+        });
+
+
     }]);

@@ -1,11 +1,10 @@
 package com.wu.lewei.service.impl;
 
-import com.wu.lewei.dao.UserDTO;
+import com.wu.lewei.dto.UserDTO;
 import com.wu.lewei.repo.UserRepository;
 import com.wu.lewei.service.UserService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;

@@ -1,5 +1,6 @@
-package com.wu.lewei.dao;
+package com.wu.lewei.dto;
 
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -7,7 +8,8 @@ import javax.persistence.Id;
  */
 public class UserDTO {
     @Id
-    private Long id;
+    @GeneratedValue
+    private String id;
     private String username;
     private Integer age;
     private String preferredLanguage;
@@ -16,14 +18,21 @@ public class UserDTO {
     public UserDTO() {
     }
 
-    public UserDTO(Long id, String username, Integer age) {
-        this.id = id;
+    public UserDTO(String username, Integer age) {
         this.username = username;
         this.age = age;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
     }
 
     public String getUsername() {
@@ -32,10 +41,6 @@ public class UserDTO {
 
     public Integer getAge() {
         return age;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public void setUsername(String username) {
