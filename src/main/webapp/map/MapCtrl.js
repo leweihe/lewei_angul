@@ -43,7 +43,6 @@ angular.module('myApp.map', ['ngRoute'])
                 {keyword: 'sm 城市广场'},
                 {keyword: '林德叉车'}
             ], function(status, result) {
-                alert(result.destination);
             });
         });
 
