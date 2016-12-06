@@ -1,5 +1,27 @@
-<div id="mapContainer2" class="map"></div>
+<div ng-controller="manageStationCtrl">
+    <div id="mapContainer2" class="map"></div>
 
-<input ng-model="fromKeyWord" type="text">
+    <input ng-model="fromKeyWord" type="text">
 
-<button ng-click="searchPoint()" type="button" class="btn btn-default">Search Nearest Point</button>
+    <button ng-click="searchPoint()" type="button" class="btn btn-default">Search Nearest Point</button>
+
+    <div class="row" ng-repeat="busRoute in busRoutes">
+        <div class="label">{{busRoute.routeName}}</div>
+        <table class="table-view">
+            <tr>
+                <th>Station Name</th>
+                <th>X</th>
+                <th>Y</th>
+                <th>ID</th>
+            </tr>
+            <tr ng-repeat="station in busRoute.stations">
+                <td>{{station.stationName}}</td>
+                <td>{{station.x}}</td>
+                <td>{{station.y}}</td>
+                <td>{{station.id}}</td>
+            </tr>
+        </table>
+            {{$scope.shortestPoint.lng}}
+            {{$scope.shortestPoint.lat}}
+    </div>
+</div>
